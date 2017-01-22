@@ -1,0 +1,231 @@
+{
+  "id": 3671,
+  "name": "Bogarra",
+  "province": "Albacete",
+  "population": 996,
+  "latitude": -2.2129,
+  "longitude": 38.58139,
+  "cartodb_id": "3748",
+  "the_geom": "0101000020E6100000158C4AEA04B401C0581CCEFC6A4A4340",
+  "cartodb_georef_status": "true",
+  "city_id": "232498",
+  "pois": [
+    {
+      "id": "109148",
+      "name": "Restaurante El Batanero",
+      "latitude": "38.599937474846",
+      "longitude": "-2.240436866300",
+      "country_id": "63",
+      "zone_id": "992",
+      "city_id": "232498",
+      "subcategory_id": "29",
+      "picture_url": "http://esphoto360x360.mnstatic.com/5994affb654e0eb84d1379f7286811f3"
+    },
+    {
+      "id": "109107",
+      "name": "Cascadas del Batán",
+      "latitude": "-0.999983239842",
+      "longitude": "-0.999983239842",
+      "country_id": "63",
+      "zone_id": "992",
+      "city_id": "232498",
+      "subcategory_id": "1",
+      "picture_url": "http://esphoto360x360.mnstatic.com/a2c91cf39815a6facef61d2d63b93a01"
+    },
+    {
+      "id": "109115",
+      "name": "Nacimiento río Bogarra",
+      "latitude": "38.583665473464",
+      "longitude": "-2.203309201176",
+      "country_id": "63",
+      "zone_id": "992",
+      "city_id": "232498",
+      "subcategory_id": "7",
+      "picture_url": "http://esphoto360x360.mnstatic.com/6edc0a5b67192a56e7445708b1419a09"
+    },
+    {
+      "id": "71952",
+      "name": "Esfinge De Haches",
+      "latitude": "38.599937474846",
+      "longitude": "-2.240436866300",
+      "country_id": "63",
+      "zone_id": "992",
+      "city_id": "232498",
+      "subcategory_id": "15",
+      "picture_url": "http://esphoto360x360.mnstatic.com/d1a047b656b99f2c8edc76b11ef8397f"
+    },
+    {
+      "id": "76545",
+      "name": "Hostal Atalaya",
+      "latitude": "38.582691445212",
+      "longitude": "-2.213335962590",
+      "country_id": "63",
+      "zone_id": "992",
+      "city_id": "232498",
+      "subcategory_id": "70",
+      "picture_url": "http://esphoto360x360.mnstatic.com/fd9653c2bd55d92906871af017283a64"
+    },
+    {
+      "id": "109130",
+      "name": "Iglesia-mirador de Bogarra",
+      "latitude": "38.580113135134",
+      "longitude": "-2.212190047000",
+      "country_id": "63",
+      "zone_id": "992",
+      "city_id": "232498",
+      "subcategory_id": "8",
+      "picture_url": "http://esphoto360x360.mnstatic.com/4f2c3b61e1e41a15d6c60263c656b400"
+    },
+    {
+      "id": "109140",
+      "name": "Plaza de toros",
+      "latitude": "38.582576853653",
+      "longitude": "-2.212992187913",
+      "country_id": "63",
+      "zone_id": "992",
+      "city_id": "232498",
+      "subcategory_id": "128",
+      "picture_url": "http://esphoto360x360.mnstatic.com/ed9ad6f4676b5f1c4f1bb05e258d70be"
+    },
+    {
+      "id": "109145",
+      "name": "Bogarra",
+      "latitude": "38.581717416960",
+      "longitude": "-2.212934892134",
+      "country_id": "63",
+      "zone_id": "992",
+      "city_id": "232498",
+      "subcategory_id": "112",
+      "picture_url": "http://esphoto360x360.mnstatic.com/31e964d79b6e66bd192e325281ae1708"
+    },
+    {
+      "id": "111392",
+      "name": "Sendero cerro del Batán-Bogarra",
+      "latitude": "-0.999983239842",
+      "longitude": "-0.999983239842",
+      "country_id": "63",
+      "zone_id": "992",
+      "city_id": "232498",
+      "subcategory_id": "53",
+      "picture_url": "http://esphoto360x360.mnstatic.com/788b24a84c7dfc330250365b3a869798"
+    },
+    {
+      "id": "1998715",
+      "name": "Hotel Val de Pinares",
+      "latitude": "38.622913082430",
+      "longitude": "-2.261063346925",
+      "country_id": "63",
+      "zone_id": "992",
+      "city_id": "232498",
+      "subcategory_id": "68",
+      "picture_url": "http://esphoto360x360.mnstatic.com/b1e6b525828ea51c6b1bbd9ae42de5a9"
+    },
+    {
+      "id": "76175",
+      "name": "Arnelia Casas Rurales",
+      "latitude": "38.572607388018",
+      "longitude": "-2.171739226664",
+      "country_id": "63",
+      "zone_id": "992",
+      "city_id": "232498",
+      "subcategory_id": "70",
+      "picture_url": "http://esphoto360x360.mnstatic.com/b8ed5c7da579e18c1c5cf1688ec567be"
+    },
+    {
+      "id": "109109",
+      "name": "Cerro del Batán",
+      "latitude": "-0.999983239842",
+      "longitude": "-0.999983239842",
+      "country_id": "63",
+      "zone_id": "992",
+      "city_id": "232498",
+      "subcategory_id": "81",
+      "picture_url": "http://esphoto360x360.mnstatic.com/1fe9997aa5373239defa19e8f9de61cc"
+    },
+    {
+      "id": "325671",
+      "name": "Hotel Rural Vegasierra",
+      "latitude": "38.615120856417",
+      "longitude": "-2.213966216165",
+      "country_id": "63",
+      "zone_id": "992",
+      "city_id": "232498",
+      "subcategory_id": "69",
+      "picture_url": "http://esphoto360x360.mnstatic.com/6b32e1ee17c958dd0f0ca2c293221a2f"
+    },
+    {
+      "id": "327311",
+      "name": "Casas Rurales Vegasierra",
+      "latitude": "38.615292743755",
+      "longitude": "-2.157415281786",
+      "country_id": "63",
+      "zone_id": "992",
+      "city_id": "232498",
+      "subcategory_id": "69",
+      "picture_url": "http://esphoto360x360.mnstatic.com/5ecde1d097e1d5e6fc2fc798974620c8"
+    },
+    {
+      "id": "2195698",
+      "name": "Senda Digital",
+      "latitude": "38.580915276047",
+      "longitude": "-2.214539173960",
+      "country_id": "63",
+      "zone_id": "992",
+      "city_id": "232498",
+      "subcategory_id": "87",
+      "picture_url": "http://esphoto360x360.mnstatic.com/5fef5d26c4696ef2006d0efda1e78683"
+    },
+    {
+      "id": "45447",
+      "name": "Casa Rural Arnelia Casas Rurales",
+      "latitude": "38.573180345813",
+      "longitude": "-2.171452747766",
+      "country_id": "63",
+      "zone_id": "992",
+      "city_id": "232498",
+      "subcategory_id": "69"
+    },
+    {
+      "id": "2118419",
+      "name": "Fabrica de vidrio ",
+      "latitude": "38.645487619558",
+      "longitude": "-2.303175744867",
+      "country_id": "63",
+      "zone_id": "992",
+      "city_id": "232498",
+      "subcategory_id": "83",
+      "picture_url": "http://esphoto360x360.mnstatic.com/a08c4aee417dd72b9e892510314ded4b"
+    },
+    {
+      "id": "2315335",
+      "name": "Bogarra",
+      "latitude": "38.581373642283",
+      "longitude": "-2.214195399283",
+      "country_id": "63",
+      "zone_id": "992",
+      "city_id": "232498",
+      "subcategory_id": "112",
+      "picture_url": "http://esphoto360x360.mnstatic.com/038ad036d5428847a89f845bbd503513"
+    },
+    {
+      "id": "440091",
+      "name": "Ocio y tiempo libre en Albacete",
+      "latitude": "38.625033026272",
+      "longitude": "-2.244734049764",
+      "country_id": "63",
+      "zone_id": "992",
+      "city_id": "232498",
+      "subcategory_id": "87"
+    },
+    {
+      "id": "33087",
+      "name": "Hotel Hotel-Spa VegaSierra",
+      "latitude": "38.613803053488",
+      "longitude": "-2.214080807724",
+      "country_id": "63",
+      "zone_id": "992",
+      "city_id": "232498",
+      "subcategory_id": "68"
+    }
+  ]
+}

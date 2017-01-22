@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+<head>
+    <title>Pequeño Encanto</title>
+    <!--<meta http-equiv="Content-type" content="text/html; charset=utf-8">-->
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/fonts/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+    
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>    
+    
+    <style>
+        /* following two viewport lines are equivalent to the meta viewport statement above, needed for Windows */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+        .center-wrapper{text-align: center;}
+        .center-wrapper * {margin: 0 auto;}
+    </style>
+
+
+</head>
+<body background="img/fondo.png">
+    <div data-role="page" data-theme='b' style="background-image: url('img/fondo.png');background-repeat: repeat-y;background-repeat: repeat-x;">
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+            <h1>MUNICIPIOS</h1>            
+        </div>
+        
+		<div class="center-wrapper">
+		  <img src="img/logoLetras.png" width="300" style=" margin-top: 50px;"/>
+		</div>
+        
+        <div data-role="content" >   
+					
+        <select name="select-choice" id="select-choice-a" data-native-menu="false" data-theme="b">
+            <option selected value=''>En toda Espa&ntilde;a</option>
+            <option value='Araba/Álava'>&Aacute;lava</option>
+            <option value='Albacete'>Albacete</option>
+            <option value='Alicante/Alacant'>Alicante</option>
+            <option value='Almería'>Almer&iacute;a</option>
+            <option value='Asturias'>Asturias</option>
+            <option value='Ávila'>&Aacute;vila</option>
+            <option value='Badajoz'>Badajoz</option>
+            <option value='Balears, Illes'>Baleares</option>
+            <option value='Barcelona'>Barcelona</option>
+            <option value='Burgos'>Burgos</option>
+            <option value='Cáceres'>C&aacute;ceres</option>
+            <option value='Cádiz'>C&aacute;diz</option>
+            <option value='Cantabria'>Cantabria</option>
+            <option value='canarias'>Canarias</option>
+            <option value='Castellón/Castelló'>Castell&oacute;n</option>
+            <option value='Ciudad Real'>Ciudad Real</option>
+            <option value='Córdoba'>C&oacute;rdoba</option>
+            <option value='Cuenca'>Cuenca</option>
+            <option value='Girona'>Girona</option>
+            <option value='Granada'>Granada</option>
+            <option value='Guadalajara'>Guadalajara</option>
+            <option value='guipuzcoa'>Guip&uacute;zcoa</option>
+            <option value='Huelva'>Huelva</option>
+            <option value='Huesca'>Huesca</option>
+            <option value='Jaén'>Ja&eacute;n</option>
+            <option value='Rioja, La'>La Rioja</option>
+            <option value='Palmas, Las'>Las Palmas</option>
+            <option value='León'>Le&oacute;n</option>
+            <option value='Lleida'>Lleida</option>
+            <option value='Lugo'>Lugo</option>
+            <option value='Madrid'>Madrid</option>
+            <option value='Málaga'>M&aacute;laga</option>
+            <option value='Murcia'>Murcia</option>
+            <option value='Navarra'>Navarra</option>
+            <option value='Ourense'>Ourense</option>
+            <option value='Palencia'>Palencia</option>
+            <option value='Pontevedra'>Pontevedra</option>
+            <option value='Salamanca'>Salamanca</option>
+            <option value='Segovia'>Segovia</option>
+            <option value='Sevilla'>Sevilla</option>
+            <option value='Soria'>Soria</option>
+            <option value='Tarragona'>Tarragona</option>
+            <option value='Teruel'>Teruel</option>
+            <option value='Toledo'>Toledo</option>
+            <option value='Valencia/València'>Valencia</option>
+            <option value='Valladolid'>Valladolid</option>
+            <option value='Bizcaia'>Vizcaya</option>
+            <option value='Zamora'>Zamora</option>
+            <option value='Zaragoza'>Zaragoza</option>
+        </select>
+        <button id="submit" style="float: right;" data-transition="flip" data-theme="b">EXPLORAR</button>
+		
+        </div>
+    </div>
+    
+	<!-- PAGINA LISTADO ELEMENTOS -->
+	<div data-role="page" data-theme="a" id="listResults" class="my-page" data-url="listResults">
+		
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='a'>
+            <h1>PUEBLOS</h1> 
+			<a href="./" data-shadow="false" data-iconshadow="false" data-icon="carat-l" data-iconpos="notext" data-rel="back" data-ajax="false">Atrás</a>
+			<a href="#cartoMunicipios">
+				<i class="fa fa-map-marker"> MAPA</i>
+			</a>
+        </div>
+		
+        <div id="resultados"></div>
+<!--        
+<div style="margin:3px;"><button class="ui-btn ui-corner-all ui-shadow" id="botonMas" data-theme="a">Ver m&aacute;s</button></div>
+-->
+	</div>
+	<!-- FIN PAGINA LISTADO ELEMENTOS -->
+    
+    <!-- PAGINA MAPA CARTO -->
+
+	<div data-role="page" data-theme="f" id="cartoMunicipios" class="my-page" data-url="cartoMunicipios">
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='a'>
+            <h1>Mapa Municipios</h1> 
+			<a href="./" data-shadow="false" data-iconshadow="false" data-icon="carat-l" data-iconpos="notext" data-rel="back" data-ajax="false">Atrás</a>
+			<a href="#listResults">
+				<i class="fa fa-list"> LISTA</i>
+			</a>
+        </div>
+		<div data-role="content" data-theme='f' style="text-align: center; color:#5dade2;">Mapa de pequeños municipios</div>
+		<div data-role="content" data-theme='f'>   
+			<iframe width="100%" height="520" frameborder="0" src="https://prueno.carto.com/builder/f58a0cf8-dfe9-11e6-b89b-0ee66e2c9693/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>    
+		</div>
+	</div>
+    <!-- FIN PAGINA CARTO -->    
+
+	<!-- PAGINA DETALLES -->
+	<div data-role="page" data-theme="b" id="paginaDetalles" class="my-page" data-url="detalles">
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='a'>
+            <h1 id="nombreMunicipio">Municipio</h1> 
+			<a href="#" data-shadow="false" data-iconshadow="false" data-icon="carat-l" data-iconpos="notext" data-rel="back" data-ajax="false">Atr&acute;s</a>	
+        </div>
+		<div data-role="content" id="descripcion" data-theme='a'>
+            <div class="center-wrapper"><h1>PUNTOS DE INTERÉS</h1></div>    
+
+        
+        </div>
+        <!--
+        <div data-role="content">
+        <div class="center-wrapper"><h3>HOTELES</h1></div>
+		<div id="hoteles" data-theme='b'></div>
+        </div>
+        <div class="center-wrapper"><h3>CÓMO LLEGAR</h1></div>
+        <div id="cabify" data-theme='b'></div>
+        -->
+	</div>
+    <!-- FIN PAGINA DETALLES -->    
+    
+    
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+ 
+    <!-- Todos los plugins JavaScript de Bootstrap (también puedes
+         incluir archivos JavaScript individuales de los únicos
+         plugins que utilices) -->
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>  
+    <script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
+    <script src="js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
+    <script src="intelxdk.js"></script>
+    <script src="xhr.js"></script>
+    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
+    <script>
+        
+        function setHeader(xhr) {
+            xhr.setRequestHeader('Authorization', 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcwOGE2MDI2M2NmMDhhNmQxZmRmNjYzMzRjYjcxZDM1NDUwMDcxY2U5MGM5M2U5MzBjZWViNmE4NjNhMzRjMmNhYjVkZTY2NjNiYzE1MDAwIn0.eyJhdWQiOiIxIiwianRpIjoiNzA4YTYwMjYzY2YwOGE2ZDFmZGY2NjMzNGNiNzFkMzU0NTAwNzFjZTkwYzkzZTkzMGNlZWI2YTg2M2EzNGMyY2FiNWRlNjY2M2JjMTUwMDAiLCJpYXQiOjE0ODUwNzg2MDgsIm5iZiI6MTQ4NTA3ODYwOCwiZXhwIjoxODAwNjExNDA4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NEhgce0i7Y0rM82nB1mGzFH7vY7Y8mq477E5M9ls8mpd6xiHSDHhtY-bLoIGaZAwMX7y_gq_5cX458ELSCSJdId_fknkaabHOa3PFDqUpfhp2bWHoZ0QmSzaVg63AXMQ3l6nmiTIxks9bAxwHhznkRgHSgPX8znymwQWAVAcYKX1j65gPyEn9WoiRHMLesj3eYLqGe6D3NavEZyxmAORd-W_O2nIAkVSDa-7DD8L9qS4wSwLI3iq3PUgZYC5qAOKZzFoYZ9mo3YkSIqVrUVrQL2Qt8y2zikxcLufYUks1iAs08yb9_tSxt92JubkzvB6E65JzCNrz8DClLGQ4T-b1Mbp4PDV84Vl2S3jt1wqzP1d3vhGgrt5jpIoicrzqn-ev__3JqoWmZuoJtS-vej-LtQM7WDVu-NBhJRF2NT4okJwW51MqiSaBxjImGqDrX-SVQzfOG1m4JQqdYaGW8M2iGDeQZiq7QfjnKjrt5XF8fNkv2kl0PdDKWTyNgWEm3AJj7O-gbITUUKt-p2bIu3_WXzz9L8W_4x9Ra9pj6PTXvrOXFm_O-7-6GCx1MKA8YDU4SFp0rKNfFC1SeVFtj6ZFtCdIh2JHn6wRPDGYTSqMIeYR6piRRM_3O1fThiUm1UebYrCzfYsuY8BAlvElYxc8LdjWwppa7D3sTAS3qUwyjw');
+        }    
+        function fallo(data) {console.log("error: " + data);}
+        
+        
+        function exitoPueblo(data){
+            $("#descripcion").html();
+            console.log(data);
+            
+            var pois = data.pois;
+            console.log(pois);
+
+            
+            $("#nombreMunicipio").html(data.name);
+            
+            $.each(pois, function( i, item ) {
+                thumbnail= "img/cityscape.png";
+
+
+                if (item.picture_url != "default"){
+                        thumbnail = item.picture_url;  
+                }
+                console.log(thumbnail);
+                var $card = $("<div/>").attr("class", "card")
+                            .appendTo("#descripcion");
+
+                var $cardimg = $("<div/>")
+                            .attr("class", "card-image")
+                            .appendTo($card); 
+
+                $("<img />").attr("src",thumbnail).appendTo($cardimg);
+                $("<h2 />").html(item.name).appendTo($cardimg);
+            });
+            
+
+            
+            $.mobile.changePage("#paginaDetalles", {
+                transition: "slide",
+                reverse: true,
+                changeHash: true
+            });        
+        }
+        
+        function detallesPueblo(unID){
+            aURL = 'http://api.conpocomelomonto.com/api/towns/'+unID;
+            console.log(unID);
+                 
+          
+            $.ajax({
+                type: "GET",
+                url: aURL,
+                dataType: 'json',
+                success: exitoPueblo,
+                error: fallo,
+                beforeSend: setHeader
+            });
+            //https://maps.googleapis.com/maps/api/staticmap?markersr="-2.2129,38.58139"&key=AIzaSyDZZwJghw6wtWUTJPCqQ9H6igvq1qLbPeo
+        }
+        
+        function exito(data) {            
+            $("#resultados").html('');
+            var $ul = $("<ul/>").attr("data-role", "listview")
+					.attr("data-inset","true")
+					.attr("data-theme","b")
+					.appendTo("#resultados");
+            $.each(data, function( i, item ) {
+                console.log(item);
+                var nombre, thumbnail, provincia;
+                
+
+                nombre = item.name;
+
+                thumbnail = 'img/cityscape.png';
+                
+                if (item.image_url != "default"){
+                    thumbnail = item.image_url;  
+                }
+                provincia = item.province;
+                
+                if (nombre != null) {
+						var $li = $("<li/>")
+						.attr("data-theme", "b")
+						.attr("onClick","detallesPueblo('"+item.id+"');")
+						.attr("class","item")
+						.appendTo($ul); 
+                   
+						var $a = $("<a />")
+						.attr("href", "#")
+						.appendTo($li);
+						
+						if (thumbnail != null) {						
+							$("<img />").attr("src",thumbnail).attr("class","imgThumb").appendTo($a);
+						}						
+						$("<h1 />").attr("class","wrap").html(nombre).appendTo($a);
+						if (provincia != null) {	
+							
+                            $("<p />").append($("<span />").attr("class","tag-precio").text(provincia)).appendTo($a);
+                            $("<p />").append($("<i />").attr("class","fa fa-users").text(" "+item.population+" habitantes")).appendTo($a);
+
+						}                   
+                    
+                }
+            });
+            $ul.listview();
+            $.mobile.changePage("#listResults", {
+                transition: "slide",
+                reverse: true,
+                changeHash: true
+            });        
+        }
+    
+        function obtenerMinicipios(provincia){          
+            var aURL = "http://api.conpocomelomonto.com/api/provinces/"+provincia+"/towns";
+            console.log(aURL);
+            
+
+            $.ajax({
+                type: "GET",
+                url: aURL,
+                dataType: 'json',
+                success: exito,
+                error: fallo,
+                beforeSend: setHeader
+            });
+
+            
+		}        
+
+        
+        $("#submit").bind("click", function(){
+            $provincia=$("#select-choice-a").val();
+				console.log($provincia);
+                //$("#resultados").empty();
+                obtenerMinicipios($provincia); 
+        });
+    
+    </script>
+</body>
+</html>
