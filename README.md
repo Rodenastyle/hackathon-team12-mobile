@@ -7,7 +7,7 @@ Pequeño Encanto es una plataforma que pretende reactivar la economía de peque�
 *PEQUEÑO ENCANTO* Cuenta con una Aplicación Web y un app móvil para dispositivos Android, iOS y Windows Phone.
 
 #VIDEO
-[![APP MOVIL DE PEQUEÑO ENCANTO](http://img.youtube.com/vi/zPACTUmG8KQ/0.jpg)](http://www.youtube.com/watch?v=zPACTUmG8KQ)
+[![APP MOVIL DE PEQUEÑO ENCANTO](http://img.youtube.com/vi/oHJMLh5btuI/0.jpg)](http://www.youtube.com/watch?v=oHJMLh5btuI)
 
 #CAPTURAS
 https://github.com/Rodenastyle/hackathon-team12-mobile/blob/master/screenshots/screenshot01.png
